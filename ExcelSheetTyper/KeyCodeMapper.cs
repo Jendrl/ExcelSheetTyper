@@ -16,6 +16,9 @@ namespace ExcelSheetTyper
             if (c == ':')
                 return KeyCodeResult.CreateModified(VirtualKeyCode.SHIFT, VirtualKeyCode.OEM_PERIOD);
 
+            if (c == '.')
+                return KeyCodeResult.CreateSimple(VirtualKeyCode.OEM_PERIOD);
+
             if (c == '-')
                 return KeyCodeResult.CreateSimple(VirtualKeyCode.OEM_MINUS);
 
