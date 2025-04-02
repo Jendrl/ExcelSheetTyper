@@ -8,8 +8,8 @@ namespace ExcelSheetTyper
         {
             var inputSimulator = new InputSimulator();
             var keyboardSimulator = new KeyboardSimulator(inputSimulator);
-            var staggeredKeyboardSimulator = new StaggerKeyboardSimulator(keyboardSimulator, 500);
-            var textTyper = new TextTyper(new StaggerKeyboardSimulator(keyboardSimulator, 10), new());
+            var staggeredKeyboardSimulator = new StaggerKeyboardSimulator(keyboardSimulator, 1000);
+            var textTyper = new TextTyper(new StaggerKeyboardSimulator(keyboardSimulator, 50), new());
             var navisionTyper = new NavisionTyper(staggeredKeyboardSimulator, textTyper);
 
             var filePath = @"C:\PKE\Utils\ExcelSheetTyper\navision.csv";
